@@ -1,8 +1,8 @@
 package com.arivista.biomarticlogin.support;
 
 import android.hardware.biometrics.BiometricPrompt;
-import androidx.annotation.RequiresApi;
 import android.os.Build;
+import android.support.annotation.RequiresApi;
 
 
 @RequiresApi(api = Build.VERSION_CODES.P)

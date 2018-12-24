@@ -74,10 +74,10 @@ class MainActivity : AppCompatActivity(), BiometricCallback {
     }
 
     override fun onAuthenticationHelp(helpCode: Int, helpString: CharSequence) {
-        //        Toast.makeText(getApplicationContext(), helpString, Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), helpString, Toast.LENGTH_LONG).show();
     }
 
     override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
-        //        Toast.makeText(getApplicationContext(), errString, Toast.LENGTH_LONG).show();
+               Toast.makeText(getApplicationContext(), errString, Toast.LENGTH_LONG).show();
     }
 }

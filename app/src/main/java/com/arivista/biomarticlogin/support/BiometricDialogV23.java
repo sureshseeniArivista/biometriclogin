@@ -4,15 +4,16 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.support.annotation.NonNull;
+import android.support.design.widget.BottomSheetDialog;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.arivista.biomarticlogin.R;
 
-import androidx.annotation.NonNull;
 
 public class BiometricDialogV23 extends BottomSheetDialog implements View.OnClickListener {
 
@@ -25,13 +26,13 @@ public class BiometricDialogV23 extends BottomSheetDialog implements View.OnClic
     private BiometricCallback biometricCallback;
 
     public BiometricDialogV23(@NonNull Context context) {
-        super(context, R.style.BottomSheetDialogTheme);
+        super(context, R.style.AppTheme);
         this.context = context.getApplicationContext();
         setDialogView();
     }
 
     public BiometricDialogV23(@NonNull Context context, BiometricCallback biometricCallback) {
-        super(context, R.style.BottomSheetDialogTheme);
+        super(context, R.style.AppTheme);
         this.context = context.getApplicationContext();
         this.biometricCallback = biometricCallback;
         setDialogView();
@@ -46,7 +47,7 @@ public class BiometricDialogV23 extends BottomSheetDialog implements View.OnClic
     }
 
     private void setDialogView() {
-        View bottomSheetView = getLayoutInflater().inflate(R.layout.view_bottom_sheet, null);
+        View bottomSheetView = getLayoutInflater().inflate(R.layout.activity_main, null);
         setContentView(bottomSheetView);
 
         btnCancel = findViewById(R.id.btn_cancel);
